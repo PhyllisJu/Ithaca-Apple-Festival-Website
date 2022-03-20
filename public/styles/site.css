@@ -1,0 +1,610 @@
+/* Source: (original work) Phyllis Ju */
+
+/* General styles */
+html {
+  min-height: 100%;
+}
+
+body {
+  background-color: #f1a87f;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #f1b00c;
+}
+
+nav, footer {
+  background-color: #f1600c;
+}
+
+h2 {
+  font-family: Verdana;
+  font-variant: small-caps;
+  font-size: 30px;
+  border-left: 8px solid #f1600c;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  padding-left:20px;
+}
+
+h3 {
+  font-family: sans-serif;
+  text-decoration: underline;
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+strong {
+  color: #9a3b05;
+}
+
+.arrow {
+  font-weight: 1000;
+  color: #f1600c;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+/* Contact icons */
+.contact_icons {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.contact_icons a {
+  width: 30px;
+  height: 100%;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.contact_icons img {
+  width: 100%;
+  height: 100%;
+}
+
+footer .contact_icons {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Navigation bar */
+nav {
+  display: flex;
+  flex-direction: row;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.current_page {
+  border-bottom: 3px solid #f1b00c;
+  padding: 2px;
+}
+
+.logo {
+  width: 60px;
+}
+
+.logo img {
+  width: 60px;
+  height: 100%;
+}
+
+nav ul {
+  width: 80%;
+  align-self: center;
+}
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+  padding: 10px;
+}
+
+nav ul li ul {
+  display:block;
+  position: absolute;
+  left:-35px;
+  z-index:1;
+}
+
+nav ul li ul li {
+  text-align: center;
+  background-color: rgba(161, 53, 16, 0.78);
+}
+
+nav a {
+  color: black;
+  font-size: 20px;
+  font-family: Verdana;
+  letter-spacing: 0.2px;
+  word-spacing: 0.8px;
+  text-decoration:none;
+}
+
+nav a:hover {
+  color: #f1b00c;
+}
+
+/* Footer */
+footer {
+  padding: 10px;
+}
+
+footer .bottom_nav, .sources, .copyright{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+footer .bottom_nav a {
+  width: 100px;
+  text-align: center;
+}
+
+footer .sources cite {
+  width: 120px;
+  text-align: center;
+}
+
+footer .sources .long_source {
+  width: 200px;
+}
+
+footer a, footer cite, footer .copyright {
+  color: black;
+  font-size: 15px;
+  font-family: sans-serif;
+  letter-spacing: 0.2px;
+  word-spacing: 0.8px;
+  text-decoration:none;
+}
+
+footer a:hover {
+  color: #f1b00c;
+}
+
+/* Home page */
+.home_banner {
+  width:100%;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.home_banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.loc_main, .hours_main {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 15px;
+}
+
+.loc_main .location {
+  margin: auto 0;
+  padding-right: 5%;
+}
+
+.loc_main figure {
+  margin: 0;
+}
+
+.loc_main img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.hours_main .hours {
+  padding-right: 5%;
+  width: 50%;
+  margin: auto 0;
+}
+
+.hours_main figure {
+  margin: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.hours_main img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.hours strong {
+  color: #9a3b05;
+  font-size: 25px;
+}
+
+/* Vendors page */
+.vendor_main {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.vendor_main aside {
+  width: 30%;
+  border-right: 3px solid #f0c863;
+  margin-right: 50px;
+}
+
+.vendor_main main {
+  width: 70%;
+}
+
+.vendor_main main img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.vendor_main main figure {
+  margin: 0;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.vendor_main li {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.list_vendors {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.list_vendors .list_text {
+  width: 30%;
+}
+
+.list_vendors .list_fig {
+  padding-top: 10%;
+  width: 70%;
+}
+
+.vendor_main aside ul {
+  position: sticky;
+  top: 30px;
+  list-style: none;
+}
+
+.vendor_main aside a {
+  font-family: sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.vendor_main aside a:hover {
+  color: #f1600c;
+}
+
+/* Transportation page */
+.trans_content aside a {
+  font-family: sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.trans_content aside ul {
+  position: sticky;
+  top: 30px;
+  list-style: none;
+}
+
+.trans_content aside a:hover {
+  color: #f1600c;
+}
+
+.trans_content main a {
+  color: #632c0d;
+}
+
+.trans_content main a:hover {
+  color: #f1600c;
+}
+
+.trans_content {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.trans_content aside {
+  width: 30%;
+  border-right: 3px solid #f0c863;
+  margin-right: 50px;
+}
+
+.trans_content main {
+  width: 70%;
+}
+
+.trans_content .map img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.trans_content .map, .parking, .bus {
+  padding: 10px;
+}
+
+/* FAQs page */
+.faqs_main {
+  padding: 25px;
+}
+
+.faqs_main li {
+  font-family: sans-serif;
+  font-size: 22px;
+}
+
+.faqs_main .show {
+  font-size: 15px;
+  color: #632c0d;
+  cursor: pointer;
+}
+
+.faqs_main a {
+  color: #632c0d;
+}
+.faqs_main a:hover {
+  color: #f1600c;
+}
+
+/* Schedule Page*/
+.schedule_main {
+  padding: 25px;
+}
+
+.schedules {
+  display: flex;
+  flex-direction: row;
+}
+
+.schedules .sat {
+  width: 30%;
+}
+
+.schedules .sun {
+  width: 70%;
+}
+
+/*404 Page*/
+.not_found {
+  padding: 25px;
+}
+
+.not_found a {
+  color: #632c0d;
+}
+
+.not_found a:hover {
+  color: #f1600c;
+}
+
+.not_found_footer {
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+}
+
+/* Mobile version */
+@media (max-width: 700px) {
+  /* General styles */
+  h2 {
+    font-size: 23px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  /*Navigation bar*/
+  nav a {
+    font-size: 17px;
+  }
+
+  nav ul li {
+    padding: 0;
+    padding: 5px;
+  }
+
+  /* contact_icons */
+  .contact_icons a {
+    width: 22px;
+    height: 100%;
+  }
+
+  /* Footer */
+  footer a, footer cite, footer .copyright {
+    color: black;
+    font-size: 13px;
+    font-family: sans-serif;
+    letter-spacing: 0.2px;
+    word-spacing: 0.8px;
+    text-decoration:none;
+  }
+
+  footer .sources cite {
+    width: 120px;
+    text-align: center;
+  }
+
+  footer .sources .long_source {
+    width: 180px;
+  }
+
+  footer .bottom_nav a {
+    width: 80px;
+    text-align: center;
+  }
+
+  /* Home page */
+  .loc_main {
+    display: inherit;
+    padding: 5px;
+    padding-top: 0;
+  }
+
+  .loc_main .location {
+    padding-right: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .hours_main {
+    display: inherit;
+    padding: 5px;
+    padding-top: 0;
+  }
+
+  .hours_main .hours {
+    margin: 0;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .hours_main figure {
+    display: none;
+  }
+
+  .hours strong {
+    font-size: 22px;
+  }
+
+  /* Vendors page */
+  .vendor_main {
+    display: inherit;
+    padding: 10px;
+  }
+
+  .list_vendors {
+    display: inherit;
+  }
+
+  .vendor_main main figure {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .vendor_main aside, .vendor_main main {
+    width: 100%;
+  }
+
+  .list_vendors .list_text {
+    width: 100%;
+  }
+
+  .list_vendors .list_fig {
+    padding-top: 10px;
+    width: 100%;
+  }
+
+  .vendor_main main .intro_vendors {
+    padding: 10px;
+    padding-bottom: 0;
+  }
+
+  .vendor_main li {
+    font-family: sans-serif;
+    font-size: 15px;
+  }
+
+  .vendor_main aside ul {
+    position: inherit;
+  }
+
+  .vendor_main aside a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+
+  .vendor_main aside {
+    border: none;
+    margin-right: 0;
+  }
+
+  /* Transportation page */
+  .trans_content {
+    display: inherit;
+    padding: 10px;
+  }
+
+  .trans_content aside, .trans_content main {
+    width: 100%;
+  }
+
+  .trans_content aside a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+
+  .trans_content aside {
+    border: none;
+    margin-right: 0;
+  }
+
+  .trans_content aside ul {
+    position: inherit;
+  }
+
+  /* FAQs page */
+  .faqs_main li {
+    font-size: 17px;
+  }
+
+  .faqs_main .show {
+    font-size: 13px;
+  }
+
+  /* Schedule Page*/
+  .schedule_main .sat, .schedule .sun {
+    font-size: 17px;
+    width: 100%;
+  }
+
+  .schedules {
+    display: inherit;
+  }
+}
+
+/*Interactivity*/
+.hidden {
+  display: none;
+}
